@@ -18,8 +18,6 @@ function writeBankData(bank) {
 
 export default {
     async execute(message, args) {
-        // Debug: Show args if needed
-        // await message.reply(`DEBUG: args = ${JSON.stringify(args)}`);
         const bank = readBankData();
         const userId = message.author.id;
         if (!bank[userId]) {

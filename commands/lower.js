@@ -18,7 +18,6 @@ export default {
     const next = Math.floor(Math.random() * 10) + 1; // 1-10
     let resultMsg = `Next number is **${next}**. `;
 
-    // Only compare numbers, no random win chance
     const isCorrect = next < session.current;
 
     if (isCorrect) {

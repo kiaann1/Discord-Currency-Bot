@@ -9,7 +9,6 @@ export default {
   description: 'Show your cash and bank balances. Usage: .bal [@user]',
   aliases: ['bal'],
   async execute(message) {
-    // Check for a mentioned user, otherwise use the message author
     const target = message.mentions.users.first() || message.author;
     const cash = getCash(target.id);
     const bank = getBank(target.id);

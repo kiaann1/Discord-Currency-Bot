@@ -4,7 +4,6 @@ function formatCoins(n) {
   return n.toLocaleString();
 }
 
-// In-memory cooldowns: { [userId]: timestamp }
 const stealCooldowns = {};
 
 const COOLDOWN = 30 * 60 * 1000; // 30 minutes in ms
@@ -74,7 +73,6 @@ export default {
       try {
         await target.send(`${message.author.username} stole ${formatCoins(amount)} cash from you!`);
       } catch {
-        // Ignore DM errors
       }
     } else {
       // Caught! Pay 70-100% of your cash to the victim
@@ -92,7 +90,6 @@ export default {
       }
     }
 
-    // Set cooldown
     stealCooldowns[thiefId] = now;
   }
 };

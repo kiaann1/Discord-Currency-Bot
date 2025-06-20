@@ -11,7 +11,6 @@ function save() {
   fs.writeFileSync(file, JSON.stringify(data, null, 2), { encoding: 'utf8' });
 }
 
-// Load data once at startup
 load();
 
 function ensureUser(userId) {

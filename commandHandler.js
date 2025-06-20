@@ -28,8 +28,8 @@ for (const file of commandFiles) {
 }
 
 function resolveAmount(userId) {
-    const userData = readUserData(); // Make sure this function exists and returns the parsed bank.json
-    const cash = userData[userId]?.cash ?? 0; // Define cash before using it
+    const userData = readUserData();
+    const cash = userData[userId]?.cash ?? 0;
     return cash > 0 ? cash : undefined;
 }
 

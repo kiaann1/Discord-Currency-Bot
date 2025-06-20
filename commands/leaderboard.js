@@ -10,7 +10,6 @@ export default {
   description: 'Show the top 10 users with the most total money (cash + bank).',
   async execute(message) {
     const data = JSON.parse(fs.readFileSync('./currency.json'));
-    // Create array of { userId, total }
     const leaderboard = Object.entries(data)
       .map(([userId, info]) => ({
         userId,
@@ -24,7 +23,6 @@ export default {
       return;
     }
 
-    // Fetch usernames for display
     const lines = await Promise.all(leaderboard.map(async (entry, idx) => {
       try {
         const user = await message.client.users.fetch(entry.userId);
