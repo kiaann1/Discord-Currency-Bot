@@ -24,10 +24,13 @@ A simple Discord bot for currency, banking, and gambling, using a JSON file for 
    npm install
    ```
 
-3. **Configure your bot:**
+3. **Create a Bot:**
+   - Create a bot using Discord Developer Portal
+   
+4. **Configure your bot:**
    - Set your Discord bot token in your environment or config as required by your `index.js`.
 
-4. **Run the bot:**
+5. **Run the bot:**
    ```sh
    npm start
    ```
